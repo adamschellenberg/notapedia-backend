@@ -1,0 +1,23 @@
+.notamonBackground {
+    background-color: #fefd87;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+}
+
+.notamon-header {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.notamon-sprite-img {
+    border: 1px solid #555;
+    padding: 15px;
+    width: 200px;
+}
+
+.notamon-element-img {
+    width: 50px;
+}
