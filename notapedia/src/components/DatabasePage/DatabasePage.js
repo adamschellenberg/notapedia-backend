@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useGetData } from '../../custom-hooks';
 import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
 import './DatabasePage.css';
 
 
 export const DatabasePage = () => {
 
   const [notamonData, setNotamonData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const getNotamonData = async () => {
     const result = await useGetData.useNotamon();
@@ -17,6 +19,10 @@ export const DatabasePage = () => {
     getNotamonData();
   }, []);
 
+  const filteredNotamon = notamonData.filter((notamon) => 
+    notamon.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div>
         <div className="databaseBackground" />
@@ -24,6 +30,16 @@ export const DatabasePage = () => {
           <h1 className="display-3 databaseHeader text-center">
             Notamon Database
           </h1>
+
+          <Form className="mb-3">
+            <Form.Control
+              type="text"
+              placeholder="Search Notamon..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </Form>
+
             <table className='table table-light table-bordered table-sm mx-auto' id="database-table">
               <thead>
                 <tr>
@@ -35,7 +51,7 @@ export const DatabasePage = () => {
               </thead>
               <tbody>
                 {
-                  notamonData.map( (notamon) => {
+                  filteredNotamon.map( (notamon) => {
                     let notamonNumber = notamon.number;
                     let notamonNumberPadded = notamonNumber.toString().padStart(3, "0");
                     let notamonName = notamon.name;
