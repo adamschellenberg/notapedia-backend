@@ -6,3 +6,5 @@ export * from './LocationsPage';
 export * from './NotamonPage';
 export * from './NavBar';
 export * from './Footer';
+export * from './SignUpPage';
+export * from './LoginPage';

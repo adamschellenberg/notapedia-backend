@@ -13,7 +13,7 @@ export const GuidesPage = () => {
 
   const getData = async () => {
     const statusResult = await useGetData.useStatus();
-    const typeResult = await useGetData.useType();
+    const typeResult = await useGetData.useTypeEffectiveness();
     const vaultResult = await useGetData.useVault();
     const keyResult = await useGetData.useKey();
 

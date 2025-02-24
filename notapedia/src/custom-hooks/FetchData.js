@@ -1,46 +1,35 @@
-import { server_calls } from '../api';
+import { serverCalls } from '../api';
 
 export const useGetData = {
     useItems: async () => {
-        const result = await server_calls.items();
-        return result;
+        return await serverCalls.items();
     },
 
     useNotamon: async () => {
-        const result = await server_calls.notamon();
-        return result;
+        return await serverCalls.notamon();
     },
 
     useGetSingleNotamon: async (notamon) => {
-        const result = await server_calls.singleNotamon(notamon);
-        const notamonNumber = result.number;
-        const notamonNumberPadded = notamonNumber.toString().padStart(3, "0");
-        result.numberPadded = notamonNumberPadded;
-        const urlForImage = "../db/extinction/images/notamon/small/" + notamonNumberPadded + "-" + result.name.toLowerCase() + ".png";
-        result.imgUrl = urlForImage;
-        const notamonTypeLowerCase = result.notamonType.toLowerCase();
-        const urlForType = "../db/extinction/images/elements/" + notamonTypeLowerCase + ".png";
-        result.typeUrl = urlForType;
+        const result = await serverCalls.singleNotamon(notamon);
+        result.numberPadded = result.number.toString().padStart(3, "0");
+        result.imgUrl = `../db/extinction/images/notamon/small/${result.numberPadded}-${result.name.toLowerCase()}.png`;
+        result.typeUrl = `../db/extinction/images/elements/${result.notamonType.toLowerCase()}.png`;
         return result;
     },
 
     useStatus: async () => {
-        const result = await server_calls.status();
-        return result;
+        return await serverCalls.status();
     },
 
-    useType: async () => {
-        const result = await server_calls.type();
-        return result;
+    useTypeEffectiveness: async () => {
+        return await serverCalls.type();
     },
 
     useVault: async () => {
-        const result = await server_calls.vaults();
-        return result;
+        return await serverCalls.vaults();
     },
 
     useKey: async () => {
-        const result = await server_calls.keys();
-        return result; 
+        return await serverCalls.keys();
     }
 }

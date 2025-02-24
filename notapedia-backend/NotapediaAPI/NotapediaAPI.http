@@ -1,0 +1,6 @@
+@NotapediaAPI_HostAddress = http://localhost:5026
+
+GET {{NotapediaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

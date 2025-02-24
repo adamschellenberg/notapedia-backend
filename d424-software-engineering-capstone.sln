@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notapedia-backend", "notapedia-backend", "{BAB2C359-4C3E-C81E-79E4-70429D4F0BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotapediaAPI", "notapedia-backend\NotapediaAPI\NotapediaAPI.csproj", "{65CA84D3-225A-F012-7EC3-D5D99325171D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65CA84D3-225A-F012-7EC3-D5D99325171D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CA84D3-225A-F012-7EC3-D5D99325171D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CA84D3-225A-F012-7EC3-D5D99325171D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CA84D3-225A-F012-7EC3-D5D99325171D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65CA84D3-225A-F012-7EC3-D5D99325171D} = {BAB2C359-4C3E-C81E-79E4-70429D4F0BA9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17A4C180-D560-4D1F-AC24-F4E07FB7DF47}
+	EndGlobalSection
+EndGlobal

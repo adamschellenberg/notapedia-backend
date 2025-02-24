@@ -26,6 +26,18 @@
     width: 40px;
 }
 
+.capture-icon {
+    transition: filter 0.3s ease-in-out;
+}
+
+.not-captured {
+    filter: grayscale(1);
+}
+
+.captured {
+    filter: grayscale(0);
+}
+
 @media (min-width: 300px) {
     .notamon-sprite-img-db {
         width: 80px;

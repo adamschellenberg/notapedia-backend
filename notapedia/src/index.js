@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import { HomePage, DatabasePage, GuidesPage, ItemsPage, NotamonPage, NavBar, Footer } from './components';
+import { HomePage, DatabasePage, GuidesPage, ItemsPage, NotamonPage, SignUpPage, LoginPage, NavBar, Footer } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <>
-    <NavBar />
+    
     <BrowserRouter>
+    <NavBar />
       <Routes>
 
         <Route path="/" element={<HomePage />} />
@@ -18,7 +19,8 @@ root.render(
         <Route path="/guides" element={<GuidesPage />} />
         <Route path="/items" element={<ItemsPage />} />
         <Route path="/notamon/*" element={<NotamonPage />} />
-        {/* <Route path="/locations" element={<LocationsPage />} /> */}
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/login" element={<LoginPage />} />
 
       </Routes>
     </BrowserRouter>

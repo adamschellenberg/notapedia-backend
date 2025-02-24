@@ -1,50 +1,40 @@
-const base_url = '/db/extinction/json';
+const baseUrl = 'http://localhost:5026/api';
 
-export const server_calls = {
+export const serverCalls = {
     
     items: async () => {
-        const response = await fetch(`${base_url}/items.json`);
-        let data = await response.json();
-        return data;
+        const response = await fetch(`${baseUrl}/items`);
+        return await response.json();
     },
 
     notamon: async () => {
-        const response = await fetch(`${base_url}/notamon.json`);
-        let data = await response.json();
-        return data;
+        const response = await fetch(`${baseUrl}/notamon`);
+        return await response.json();
     },
 
     singleNotamon: async (notamon) => {
-        const response = await fetch(`${base_url}/notamon.json`);
-        let data = await response.json();
-        let singleNotamon = data.filter(function(notamonData) {
-            return notamonData.name.toLowerCase() === notamon;
-        });
-        return singleNotamon[0];
+        const response = await fetch(`${baseUrl}/notamon/${notamon}`);
+        return await response.json();
     },
 
     status: async () => {
-        const response = await fetch(`${base_url}/statusEffect.json`);
-        let data = await response.json();
-        return data;
+        const response = await fetch(`${baseUrl}/statuses`);
+        return await response.json();
     },
 
-    type: async () => {
-        const response = await fetch(`${base_url}/typeEffectiveness.json`);
-        let data = await response.json();
-        return data;
+    typeEffectiveness: async () => {
+        const response = await fetch(`${baseUrl}/typeeffectivenesses`);
+        return await response.json();
     },
 
     vaults: async () => {
-        const response = await fetch(`${base_url}/vault.json`);
-        let data = await response.json();
-        return data;
+        const response = await fetch(`${baseUrl}/vaults`);
+        return await response.json();
     },
 
     keys: async () => {
-        const response = await fetch(`${base_url}/key.json`);
-        let data = await response.json();
-        return data;    
+        const response = await fetch(`${baseUrl}/keys`);
+        return await response.json();
     }
 
 }
