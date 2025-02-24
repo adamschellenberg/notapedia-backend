@@ -156,3 +156,9 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.pdb
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.genruntimeconfig.cache
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/ref/NotapediaAPI.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/items.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/key.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/notamon.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/statusEffect.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/typeEffectiveness.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/vault.json

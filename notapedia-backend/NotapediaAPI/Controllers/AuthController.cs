@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using NotapediaAPI.Data;
+using NotapediaAPI.Models;
 
 namespace NotapediaAPI.Controllers
 {
@@ -12,11 +13,11 @@ namespace NotapediaAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
         private readonly IConfiguration _configuration;
 
-        public AuthController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IConfiguration configuration)
+        public AuthController(UserManager<User> userManager, SignInManager<User> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -29,17 +30,22 @@ namespace NotapediaAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(new {message = "Invalid request body"});
 
-            var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+            var user = new User
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                ProfileImage = "masquiti-follower.png"
+            };
+
             var result = await _userManager.CreateAsync(user, model.Password);
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
-                return Ok(new { message = "User registered successfully!"});
+                return Ok(new { message = "User registered successfully!" });
             }
 
             var errorMessages = result.Errors.Select(e => e.Description).ToList();
-
-            return BadRequest(new {errors = errorMessages});
+            return BadRequest(new { errors = errorMessages });
         }
 
         [HttpPost("login")]

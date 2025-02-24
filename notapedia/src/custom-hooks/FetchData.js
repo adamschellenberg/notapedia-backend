@@ -22,7 +22,7 @@ export const useGetData = {
     },
 
     useTypeEffectiveness: async () => {
-        return await serverCalls.type();
+        return await serverCalls.typeEffectiveness();
     },
 
     useVault: async () => {

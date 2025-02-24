@@ -97,7 +97,7 @@ export const DatabasePage = () => {
                     let notamonNumber = notamon.number;
                     let notamonNumberPadded = notamonNumber.toString().padStart(3, "0");
                     let notamonName = notamon.name;
-                    let notamonType = notamon.nexomonType;
+                    let notamonType = notamon.type;
                     let notamonTypeImagePath = "db/extinction/images/elements/" + notamonType.toLowerCase() + ".png";
                     let notamonImagePath = "db/extinction/images/notamon/small/" + notamonNumberPadded + "-" + notamonName.toLowerCase() + ".png";
 
@@ -108,8 +108,8 @@ export const DatabasePage = () => {
                             <img 
                               src={require("../../assets/images/notatrap.png")}
                               alt="Capture Icon"
-                              className={`capture-icon ${capturedNotamon.has(notamon.nexomonId) ? "captured" : "not-captured"}`}
-                              onClick={() => toggleCapture(notamon.nexomonId)}
+                              className={`capture-icon ${capturedNotamon.has(notamon.notamonId) ? "captured" : "not-captured"}`}
+                              onClick={() => toggleCapture(notamon.notamonId)}
                               style={{ cursor: "pointer", width: "40px", height: "40px"}}
                               />
                           </td>

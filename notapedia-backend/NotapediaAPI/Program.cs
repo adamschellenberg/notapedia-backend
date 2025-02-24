@@ -4,8 +4,17 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using NotapediaAPI.Data;
+using NotapediaAPI.Models;
+using System;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Storage;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -19,19 +28,18 @@ builder.Services.AddCors(options =>
             policy.WithOrigins("http://localhost:3000")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
-                .AllowCredentials()
-                .SetPreflightMaxAge(TimeSpan.FromMinutes(10));
+                .AllowCredentials();
         });
 });
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-var key = Encoding.UTF8.GetBytes("SuperSecureLongKey123!@#SuperSecureLongKey123!@#");
+var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]);
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -60,16 +68,30 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-app.UseCors(MyAllowSpecificOrigins);
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        DatabaseSeeder.SeedAsync(context).Wait();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occured while seeding the database.");
+    }
+}
 
-// app.UseHttpsRedirection();
+app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.Run();

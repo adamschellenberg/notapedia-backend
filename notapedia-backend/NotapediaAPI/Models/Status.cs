@@ -7,11 +7,11 @@ namespace NotapediaAPI.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int StatusId { get; set; }
+        public int StatusEffectId { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public string Name { get; set; }
+        public string Effect { get; set; }
 
         [MaxLength(255)]
         public string Description { get; set; }

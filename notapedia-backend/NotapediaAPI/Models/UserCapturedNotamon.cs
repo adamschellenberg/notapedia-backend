@@ -18,7 +18,7 @@ namespace NotapediaAPI.Models
         public DateTime CaptureDate { get; set; } = DateTime.UtcNow;
         
         [ForeignKey("UserId")]
-        public virtual User user { get; set; }
+        public virtual User User { get; set; }
 
         [ForeignKey("NotamonId")]
         public virtual Notamon Notamon { get; set; }

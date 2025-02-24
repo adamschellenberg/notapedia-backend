@@ -13,14 +13,14 @@ namespace NotapediaAPI.Models
         [MaxLength(100)]
         public string Type { get; set; }
 
-        public int Normal { get; set; }
-        public int Fire { get; set; }
-        public int Water { get; set; }
-        public int Plant { get; set; }
-        public int Wind { get; set; }
-        public int Electric { get; set; }
-        public int Mineral { get; set; }
-        public int Ghost { get; set; }
-        public int Psychic { get; set; }
+        public string Normal { get; set; }
+        public string Fire { get; set; }
+        public string Water { get; set; }
+        public string Plant { get; set; }
+        public string Wind { get; set; }
+        public string Electric { get; set; }
+        public string Mineral { get; set; }
+        public string Ghost { get; set; }
+        public string Psychic { get; set; }
     }
 }

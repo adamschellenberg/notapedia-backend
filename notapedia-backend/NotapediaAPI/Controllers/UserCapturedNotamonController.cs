@@ -17,9 +17,9 @@ namespace NotapediaAPI.Controllers
     public class UserCapturedNotamonController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
 
-        public UserCapturedNotamonController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public UserCapturedNotamonController(ApplicationDbContext context, UserManager<User> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -29,7 +29,7 @@ namespace NotapediaAPI.Controllers
         public async Task<IActionResult> GetCapturedNotamon()
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (userId == null) return Unauthorized();
+            if (string.IsNullOrEmpty(userId)) return Unauthorized();
 
             var capturedNotamonIds = await _context.UserCapturedNotamons
                 .Where(u => u.UserId == userId)
@@ -43,7 +43,7 @@ namespace NotapediaAPI.Controllers
         public async Task<IActionResult> CapturedNotamon(int notamonId)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (userId == null) return Unauthorized();
+            if (string.IsNullOrEmpty(userId)) return Unauthorized();
             
             bool alreadyCaptured = await _context.UserCapturedNotamons
                 .AnyAsync(u => u.UserId == userId && u.NotamonId == notamonId);
@@ -68,7 +68,7 @@ namespace NotapediaAPI.Controllers
         public async Task<IActionResult> ReleaseNotamon(int notamonId)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (userId == null) return Unauthorized();
+            if (string.IsNullOrEmpty(userId)) return Unauthorized();
 
             var capturedNotamon = await _context.UserCapturedNotamons
                 .FirstOrDefaultAsync(u => u.UserId == userId && u.NotamonId == notamonId);

@@ -9,11 +9,11 @@ namespace NotapediaAPI.Controllers
 {
     [Route("api/notamon")]
     [ApiController]
-    public class NotamonController : ControllerBase
+    public class NotamonsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public NotamonController(ApplicationDbContext context)
+        public NotamonsController(ApplicationDbContext context)
         {
             _context = context;
         }
