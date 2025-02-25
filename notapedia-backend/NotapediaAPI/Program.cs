@@ -25,7 +25,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("https://jolly-rock-02b82e81e.6.azurestaticapps.net/") 
+            policy.WithOrigins("https://jolly-rock-02b82e81e.6.azurestaticapps.net") 
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials();
