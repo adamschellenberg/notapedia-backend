@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotapediaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7ba5d27564f5ab1dafbebe6741590095f79d716")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c3d47bd6c03c671ee32b74f7787a65b3f121e9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotapediaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotapediaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

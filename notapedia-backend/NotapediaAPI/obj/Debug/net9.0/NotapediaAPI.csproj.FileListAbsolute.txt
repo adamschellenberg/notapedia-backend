@@ -1,11 +1,18 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/appsettings.Development.json
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/appsettings.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/items.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/key.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/notamon.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/statusEffect.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/typeEffectiveness.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/vault.json
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/NotapediaAPI.staticwebassets.endpoints.json
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/NotapediaAPI
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/NotapediaAPI.deps.json
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/NotapediaAPI.runtimeconfig.json
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/NotapediaAPI.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/NotapediaAPI.pdb
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Castle.Core.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Humanizer.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -22,6 +29,7 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
@@ -33,6 +41,8 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Moq.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Newtonsoft.Json.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SQLitePCLRaw.batteries_v2.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SQLitePCLRaw.core.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SQLitePCLRaw.provider.e_sqlite3.dll
@@ -46,6 +56,10 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/System.Composition.Runtime.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/System.Composition.TypedParts.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/xunit.abstractions.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/xunit.assert.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/xunit.core.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/xunit.execution.dotnet.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -132,6 +146,7 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.csproj.AssemblyReference.cache
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.GeneratedMSBuildEditorConfig.editorconfig
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.AssemblyInfoInputs.cache
@@ -156,9 +171,5 @@
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.pdb
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/NotapediaAPI.genruntimeconfig.cache
 /Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Debug/net9.0/ref/NotapediaAPI.dll
-/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/items.json
-/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/key.json
-/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/notamon.json
-/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/statusEffect.json
-/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/typeEffectiveness.json
-/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/SeedData/vault.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Tests/NotapediaAPI.Tests/obj/NotapediaAPI.Tests.csproj.nuget.dgspec.json
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/bin/Debug/net9.0/Tests/NotapediaAPI.Tests/obj/project.assets.json
