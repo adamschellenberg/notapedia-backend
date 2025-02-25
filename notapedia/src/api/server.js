@@ -35,6 +35,27 @@ export const serverCalls = {
     keys: async () => {
         const response = await fetch(`${baseUrl}/keys`);
         return await response.json();
+    },
+
+    fetchUserProgress: async (token) => {
+        try {
+            const response = await fetch(`${baseUrl}/progress/summary`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to fetch progress");
+            }
+
+            return await response.json();
+        } catch (error) {
+            console.error("Error fetching progress: ", error);
+            return null;
+        }
     }
 
 }

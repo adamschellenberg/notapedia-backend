@@ -1,4 +1,5 @@
 import { serverCalls } from '../api';
+import React, { useState, useEffect } from 'react';
 
 export const useGetData = {
     useItems: async () => {
@@ -31,5 +32,25 @@ export const useGetData = {
 
     useKey: async () => {
         return await serverCalls.keys();
-    }
-}
+    },
+
+    
+};
+
+export const useFetchProgress = () => {
+    const [progress, setProgress] = useState(null);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (!token) return;
+
+        const getProgress = async () => {
+            const data = await serverCalls.fetchUserProgress(token);
+            if (data) setProgress(data.progressPercentage);
+        };
+
+        getProgress();
+    }, []);
+
+    return progress;
+};

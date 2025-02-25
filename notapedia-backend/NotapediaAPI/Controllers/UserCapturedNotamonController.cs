@@ -39,6 +39,33 @@ namespace NotapediaAPI.Controllers
             return Ok(capturedNotamonIds);
         }
 
+        [HttpGet("summary")]
+        public async Task<IActionResult> GetUserProgress()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                return Unauthorized(new { message = "User not authenticated" });
+            }
+
+            int totalNotamon = await _context.Notamons.CountAsync();
+
+            int capturedNotamonCount = await _context.UserCapturedNotamons
+                .Where(ucn => ucn.UserId == userId)
+                .CountAsync();
+
+            double progressPercentage = totalNotamon > 0
+                ? Math.Round((double)capturedNotamonCount / totalNotamon * 100, 2)
+                : 0;
+
+            return Ok(new
+            {
+                totalNotamon,
+                capturedNotamonCount,
+                progressPercentage
+            });
+        }
+
         [HttpPost("{notamonId}")]
         public async Task<IActionResult> CapturedNotamon(int notamonId)
         {

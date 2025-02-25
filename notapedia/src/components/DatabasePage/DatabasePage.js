@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useGetData } from '../../custom-hooks';
+import { useGetData, useFetchProgress } from '../../custom-hooks';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import './DatabasePage.css';
 
 
-export const DatabasePage = () => {
+export const DatabasePage = ({ onProgressUpdate }) => {
 
   const [notamonData, setNotamonData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -39,6 +39,20 @@ export const DatabasePage = () => {
     fetchCaptured();
   }, [token]);
 
+  const fetchProgress = async () => {
+    try {
+      const response = await axios.get("http://localhost:5026/api/progress/summary", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (response.data && onProgressUpdate) {
+        onProgressUpdate(response.data.progressPercentage);
+        console.log(`Total Notamon: ${response.data.totalNotamon}\nNotamon Captured: ${response.data.capturedNotamonCount}\nProgress Percentage: ${response.data.progressPercentage}`);
+      }
+    } catch (error) {
+      console.error("Error fetching progress data", error);
+    }
+  };
+
   const toggleCapture = async (notamonId) => {
     if (!token) return alert("You must be logged in to track Notamon!");
 
@@ -55,6 +69,9 @@ export const DatabasePage = () => {
       }
 
       setCapturedNotamon(new Set(capturedNotamon));
+
+      await fetchProgress();
+
     } catch (error) {
       console.error("Error updating capture status", error);
     }
