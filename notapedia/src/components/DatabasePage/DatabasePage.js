@@ -74,9 +74,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
       }
 
       setCapturedNotamon(new Set(capturedNotamon));
-
       await fetchProgress();
-
     } catch (error) {
       console.error("Error updating capture status", error);
     }
