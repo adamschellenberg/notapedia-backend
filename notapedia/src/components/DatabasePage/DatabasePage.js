@@ -11,7 +11,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
   const [notamonData, setNotamonData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [capturedNotamon, setCapturedNotamon] = useState(new Set());
-  const [selectedType, setSelectedType] = useState("");
+  const [selectedType, setSelectedType] = useState("All");
   const token = localStorage.getItem("token");
 
   const notamonTypes = [
@@ -84,7 +84,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
 
   const filteredNotamon = notamonData.filter((notamon) => 
     notamon.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-  (selectedType === "" || notamon.type === selectedType)
+  (selectedType === "All" || notamon.type.toLowerCase() === selectedType.toLowerCase())
   );
 
   return (
@@ -102,6 +102,14 @@ export const DatabasePage = ({ onProgressUpdate }) => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+          </Form>
+
+          <Form className="mb-3">
+            <Form.Select value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
+              {notamonTypes.map((type) => (
+                <option key={type} value={type}>{type}</option>
+              ))}
+            </Form.Select>
           </Form>
 
             <table className='table table-light table-bordered table-sm mx-auto' id="database-table">
