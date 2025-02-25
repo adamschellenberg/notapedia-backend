@@ -10,7 +10,7 @@ namespace NotapediaAPI.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        public DbSet<User> Users { get; set; }
+        public override DbSet<User> Users { get; set; }
         public DbSet<Notamon> Notamons { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Vault> Vaults { get; set; }
