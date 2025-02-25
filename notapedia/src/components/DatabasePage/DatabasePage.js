@@ -95,6 +95,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
             Notamon Database
           </h1>
 
+          <div className="searchDiv mx-auto">
           <Form className="mb-3">
             <Form.Control
               type="text"
@@ -111,6 +112,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
               ))}
             </Form.Select>
           </Form>
+          </div>
 
             <table className='table table-light table-bordered table-sm mx-auto' id="database-table">
               <thead>

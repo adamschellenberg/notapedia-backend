@@ -5,6 +5,7 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
+import './ProfilePage.css';
 
 export const ProfilePage = () => {
     const [profile, setProfile] = useState(null);
@@ -121,7 +122,9 @@ export const ProfilePage = () => {
 
     return (
         <Container>
-            <h1 className="text-center">Profile Page</h1>
+            <h1 className="text-center display-3 profileHeader">
+                Profile Page
+                </h1>
 
             {profile && (
                 <div className="text-center">

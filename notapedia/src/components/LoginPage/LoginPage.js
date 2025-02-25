@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -27,26 +30,30 @@ export const LoginPage = () => {
 
   return (
     <div className="auth-container">
-      <h2>Login</h2>
+      <h1 className="text-center display-3 loginHeader">Login</h1>
       {message && <p>{message}</p>}
-      <form onSubmit={handleLogin}>
-        <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        />
-        <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-        />
+      <div className="mx-auto loginDiv">
+        <Form onSubmit={handleLogin}>
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+          type="text"
+          placeholder="Enter email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          />
+          <Form.Label className="passwordLabel">Password</Form.Label>
+          <Form.Control
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          />
 
-        <button type="submit">Login</button>
-      </form>
+          <Button type="submit" variant="primary" className="my-3">Login</Button>
+        </Form>
+      </div>
     </div>
   )
 }
