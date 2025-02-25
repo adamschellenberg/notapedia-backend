@@ -121,6 +121,31 @@ namespace NotapediaAPI.Controllers
             return File(reportBytes, "text/plain", fileName);
         }
 
+        [HttpGet("capturednotamons")]
+        public async Task<IActionResult> GetCapturedNotamon()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null) return Unauthorized();
+
+            var capturedNotamon = await _context.UserCapturedNotamons
+                .Where(ucn => ucn.UserId == userId)
+                .Join(
+                    _context.Notamons,
+                    ucn => ucn.NotamonId,
+                    n => n.NotamonId,
+                    (ucn, n) => new
+                    {
+                        n.Number,
+                        n.Name,
+                        n.Type,
+                        ucn.CaptureDate
+                    }
+                )
+                .ToListAsync();
+
+            return Ok(capturedNotamon);
+        }
+
         public class UpdateUsernameRequest
         {
             public string NewUsername { get; set; }

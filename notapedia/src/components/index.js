@@ -8,3 +8,4 @@ export * from './NavBar';
 export * from './Footer';
 export * from './SignUpPage';
 export * from './LoginPage';
+export * from './ProfilePage';

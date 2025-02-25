@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import { HomePage, DatabasePage, GuidesPage, ItemsPage, NotamonPage, SignUpPage, LoginPage, NavBar, Footer } from './components';
+import { HomePage, DatabasePage, GuidesPage, ItemsPage, NotamonPage, SignUpPage, LoginPage, NavBar, Footer, ProfilePage } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/notamon/*" element={<NotamonPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

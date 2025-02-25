@@ -39,8 +39,10 @@ export const NavBar = ({ progress }) => {
                         </Nav.Item>
                         {token ? (
                             <>
-                                { (
-                                    <Nav.Item className="mx-3 d-flex align-items-center">
+                                    <Nav.Item>
+                                    <Nav.Link href="/profile">Profile</Nav.Link>
+                                </Nav.Item>
+                                    <Nav.Item className="mx-3 my-2 d-flex align-items-center">
                                         <span className="text-light me-2">Database Completion: </span>
                                         <ProgressBar
                                             now={currentProgress}
@@ -49,7 +51,6 @@ export const NavBar = ({ progress }) => {
                                             variant="success"
                                         />
                                     </Nav.Item>
-                                )}
                                 <Nav.Item>
                                     <Button variant="outline-light" onClick={handleLogout}>Logout</Button>
                                 </Nav.Item>
