@@ -1,0 +1,8 @@
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.csproj.AssemblyReference.cache
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.AssemblyInfoInputs.cache
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.AssemblyInfo.cs
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.csproj.CoreCompileInputs.cache
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/adamschellenberg/GitHub/d424-software-engineering-capstone/notapedia-backend/NotapediaAPI/obj/Release/net9.0/NotapediaAPI.sourcelink.json

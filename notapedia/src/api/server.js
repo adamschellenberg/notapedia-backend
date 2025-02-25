@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:5026/api';
+const baseUrl = 'http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api';
 
 export const serverCalls = {
     

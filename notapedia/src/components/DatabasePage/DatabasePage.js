@@ -31,7 +31,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
     const fetchCaptured = async () => {
       if (!token) return;
       try {
-        const response = await axios.get("http://localhost:5026/api/progress", {
+        const response = await axios.get("http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/progress", {
           headers: { Authorization: `Bearer ${token}`},
         });
         setCapturedNotamon(new Set(response.data));
@@ -46,7 +46,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
 
   const fetchProgress = async () => {
     try {
-      const response = await axios.get("http://localhost:5026/api/progress/summary", {
+      const response = await axios.get("http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/progress/summary", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (response.data && onProgressUpdate) {
@@ -62,7 +62,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
     if (!token) return alert("You must be logged in to track Notamon!");
 
     const isCaptured = capturedNotamon.has(notamonId);
-    const url = `http://localhost:5026/api/progress/${notamonId}`;
+    const url = `http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/progress/${notamonId}`;
 
     try {
       if(isCaptured) {

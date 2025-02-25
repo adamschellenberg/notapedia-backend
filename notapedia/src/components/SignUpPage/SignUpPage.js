@@ -15,7 +15,7 @@ export const SignUpPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5026/api/auth/register", {
+      const response = await axios.post("http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/auth/register", {
         email,
         password,
       });
