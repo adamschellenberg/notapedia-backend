@@ -39,7 +39,7 @@ namespace NotapediaAPI.Controllers
 
             return Ok(new
             {
-                user.Username,
+                user.UserName,
                 user.Email,
                 user.ProfileImage
             });
@@ -56,12 +56,25 @@ namespace NotapediaAPI.Controllers
             if (user == null)
                 return NotFound(new { message = "User profile not found." });
 
-            user.Username = request.NewUsername;
+            var existingUser = await _userManager.FindByEmailAsync(request.NewUsername);
+            if (existingUser != null && existingUser.Id != user.Id)
+            {
+                return BadRequest(new { message = "Username is already taken." });
+            }
+
+            Console.WriteLine($"Updating username of {user.UserName} to {request.NewUsername}");
+
+            user.UserName = request.NewUsername;
+            user.NormalizedUserName = request.NewUsername.ToUpper();
+
             var result = await _userManager.UpdateAsync(user);
 
             if (!result.Succeeded)
-                return BadRequest(new { message = "Failed to update username.", errors = result.Errors });
-
+            {
+                Console.WriteLine("Error updating profile username: " + string.Join(",", result.Errors.Select(e => e.Description)));
+                return BadRequest(new { message = "Failed to update username.", errors = result.Errors.Select(e => e.Description).ToList() });
+            }
+            
             return Ok(new { message = "Username updated successfully!" });
         }
 
@@ -76,11 +89,18 @@ namespace NotapediaAPI.Controllers
             if (user == null)
                 return NotFound(new { message = "User profile not found." });
 
+            Console.WriteLine($"Updating profile image for user {user.UserName} to {request.NewProfileImage}");
+
             user.ProfileImage = request.NewProfileImage;
             var result = await _userManager.UpdateAsync(user);
 
             if (!result.Succeeded)
+            {  
+                Console.WriteLine("Error updating profile image: " + string.Join(",", result.Errors.Select(e => e.Description)));
                 return BadRequest(new { message = "Failed to update profile image.", errors = result.Errors});
+            }
+
+            Console.WriteLine($"Profile image updated successfulle!");
 
             return Ok(new { message = "Profile image updated successfully!" });
         }
@@ -104,7 +124,7 @@ namespace NotapediaAPI.Controllers
                 return BadRequest(new { message = "No captured Notamons to generate a report." });
             
             var reportBuilder = new StringBuilder();
-            reportBuilder.AppendLine($"User Report for {user.Username}");
+            reportBuilder.AppendLine($"User Report for {user.UserName}");
             reportBuilder.AppendLine($"Generated on: {System.DateTime.UtcNow}");
             reportBuilder.AppendLine("====================================");
             reportBuilder.AppendLine("Captured Notamon:");
@@ -116,7 +136,7 @@ namespace NotapediaAPI.Controllers
             }
 
             var reportBytes = Encoding.UTF8.GetBytes(reportBuilder.ToString());
-            var fileName = $"UserReport_{user.Username}_{System.DateTime.UtcNow:yyyyMMdd}.txt";
+            var fileName = $"UserReport_{user.UserName}_{System.DateTime.UtcNow:yyyyMMdd}.txt";
 
             return File(reportBytes, "text/plain", fileName);
         }

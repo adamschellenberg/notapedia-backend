@@ -11,7 +11,12 @@ export const DatabasePage = ({ onProgressUpdate }) => {
   const [notamonData, setNotamonData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [capturedNotamon, setCapturedNotamon] = useState(new Set());
+  const [selectedType, setSelectedType] = useState("");
   const token = localStorage.getItem("token");
+
+  const notamonTypes = [
+    "All", "Normal", "Fire", "Water", "Plant", "Wind", "Electric", "Mineral", "Ghost", "Psychic"
+  ];
 
   useEffect(() => {
     const fetchNotamon = async () => {
@@ -78,7 +83,8 @@ export const DatabasePage = ({ onProgressUpdate }) => {
   };
 
   const filteredNotamon = notamonData.filter((notamon) => 
-    notamon.name.toLowerCase().includes(searchQuery.toLowerCase())
+    notamon.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+  (selectedType === "" || notamon.type === selectedType)
   );
 
   return (
