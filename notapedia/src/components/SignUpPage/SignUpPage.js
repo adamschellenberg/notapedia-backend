@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './SignUpPage.css';
+import Alert from 'react-bootstrap/Alert';
 
 export const SignUpPage = () => {
   const [email, setEmail] = useState("");
@@ -11,8 +12,22 @@ export const SignUpPage = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
   const handleSignUp = async (e) => {
     e.preventDefault();
+    
+    if (!emailRegex.test(email)) {
+      setMessage("Invalid email format. Please enter a valid email.");
+      return;
+    }
+
+    if (!passwordRegex.test(password)) {
+      setMessage("Password must be at least 8 characters long, include one uppercase letter, one lowercase letter, one number, and one special character.");
+      return;
+    }
 
     try {
       const response = await axios.post("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/auth/register", {
@@ -31,7 +46,7 @@ export const SignUpPage = () => {
   return (
     <div className="auth-container">
       <h1 className="display-3 text-center signupHeader">Sign Up</h1>
-      {message && <p>{message}</p>}
+      {message && <Alert className="mx-5">{message}</Alert>}
       <div className="mx-auto signupDiv">
         <Form onSubmit={handleSignUp}>
           <Form.Label>Email</Form.Label>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -11,8 +12,15 @@ export const LoginPage = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    if (!emailRegex.test(email)) {
+      setMessage("Invalid email format. Please enter a valid email.");
+      return;
+    }
 
     try {
       const response = await axios.post("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/auth/login", {
@@ -31,7 +39,7 @@ export const LoginPage = () => {
   return (
     <div className="auth-container">
       <h1 className="text-center display-3 loginHeader">Login</h1>
-      {message && <p>{message}</p>}
+      {message && <Alert className="mx-5">{message}</Alert>}
       <div className="mx-auto loginDiv">
         <Form onSubmit={handleLogin}>
           <Form.Label>Email</Form.Label>

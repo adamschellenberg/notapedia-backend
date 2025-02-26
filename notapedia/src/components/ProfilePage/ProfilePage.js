@@ -62,7 +62,7 @@ export const ProfilePage = () => {
 
         const usernameRegex = /^[a-zA-Z0-9]+$/;
         if (!usernameRegex.test(newUsername)) {
-            setMessage("Username can only contain letters and numbers.");
+            setMessage({type: "danger", text: "Username can only contain letters and numbers."});
             return;
         }
 

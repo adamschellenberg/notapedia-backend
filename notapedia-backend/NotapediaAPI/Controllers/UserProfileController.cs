@@ -125,7 +125,7 @@ namespace NotapediaAPI.Controllers
             
             var reportBuilder = new StringBuilder();
             reportBuilder.AppendLine($"User Report for {user.UserName}");
-            reportBuilder.AppendLine($"Generated on: {System.DateTime.UtcNow}");
+            reportBuilder.AppendLine($"Generated on: {System.DateTime.Now}");
             reportBuilder.AppendLine("====================================");
             reportBuilder.AppendLine("Captured Notamon:");
             reportBuilder.AppendLine("------------------------------------");
