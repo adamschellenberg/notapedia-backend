@@ -1,4 +1,4 @@
-const baseUrl = 'http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api';
+const baseUrl = 'https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api';
 
 export const serverCalls = {
     

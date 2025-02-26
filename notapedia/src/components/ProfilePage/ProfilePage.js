@@ -27,7 +27,7 @@ export const ProfilePage = () => {
         const fetchProfileData = async () => {
             if (!token) return;
             try {
-                const response = await axios.get("http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile", {
+                const response = await axios.get("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile", {
                     headers: { Authorization : `Bearer ${token}`},
                 });
                 setProfile(response.data);
@@ -38,7 +38,7 @@ export const ProfilePage = () => {
 
         const fetchCapturedNotamon = async () => {
             try {
-                const response = await axios.get("http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/capturednotamons", {
+                const response = await axios.get("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/capturednotamons", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setCapturedNotamon(response.data);
@@ -69,7 +69,7 @@ export const ProfilePage = () => {
         console.log("Sending request body: ", JSON.stringify({newUsername }));
         try {
             await axios.put(
-                "http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/username",
+                "https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/username",
                 { newUsername },
                 { headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } }
             );
@@ -86,7 +86,7 @@ export const ProfilePage = () => {
     const updateProfilePicture = async (image) => {
         try {
             const response = await axios.put(
-                "http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/image",
+                "https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/image",
                 { newProfileImage: image },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -103,7 +103,7 @@ export const ProfilePage = () => {
 
     const downloadReport = async () => {
         try {
-            const response = await axios.get("http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/report", {
+            const response = await axios.get("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/report", {
                 headers: { Authorization: `Bearer ${token}` },
                 responseType: 'blob',
             });
