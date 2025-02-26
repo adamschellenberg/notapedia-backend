@@ -5,7 +5,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
-      "applicationUrl": "http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/",
+      "applicationUrl": "http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -14,7 +14,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
-      "applicationUrl": "http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/",
+      "applicationUrl": "http://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
