@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "74xBG7y4aYX78vGmJD0PUbOWUYnaUYKj/rARtfFVU9w=",
+  "Source": "NotapediaAPI",
+  "BasePath": "_content/NotapediaAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
