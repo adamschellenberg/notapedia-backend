@@ -39,7 +39,7 @@
 }
 
 @media (min-width: 300px) {
-    .notamon-sprite-img-db {
+    .nexomon-sprite-img-db {
         width: 80px;
     }
     #database-table {
@@ -50,7 +50,7 @@
 
 
 @media (min-width: 1000px) {
-    .notamon-sprite-img-db {
+    .nexomon-sprite-img-db {
         width: 150px;
     }
 }

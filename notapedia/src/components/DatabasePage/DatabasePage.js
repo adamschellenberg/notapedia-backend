@@ -8,23 +8,23 @@ import './DatabasePage.css';
 
 export const DatabasePage = ({ onProgressUpdate }) => {
 
-  const [notamonData, setNotamonData] = useState([]);
+  const [nexomonData, setNexomonData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [capturedNotamon, setCapturedNotamon] = useState(new Set());
+  const [capturedNexomon, setCapturedNexomon] = useState(new Set());
   const [selectedType, setSelectedType] = useState("All");
   const token = localStorage.getItem("token");
 
-  const notamonTypes = [
+  const nexomonTypes = [
     "All", "Normal", "Fire", "Water", "Plant", "Wind", "Electric", "Mineral", "Ghost", "Psychic"
   ];
 
   useEffect(() => {
-    const fetchNotamon = async () => {
+    const fetchNexomon = async () => {
       try {
-        const result = await useGetData.useNotamon();
-        setNotamonData(result);
+        const result = await useGetData.useNexomon();
+        setNexomonData(result);
       } catch (error) {
-        console.error("Error fetching Notamon data", error);
+        console.error("Error fetching Nexomon data", error);
       }
     };
 
@@ -34,13 +34,13 @@ export const DatabasePage = ({ onProgressUpdate }) => {
         const response = await axios.get("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/progress", {
           headers: { Authorization: `Bearer ${token}`},
         });
-        setCapturedNotamon(new Set(response.data));
+        setCapturedNexomon(new Set(response.data));
       } catch (error) {
-        console.error ("Error fetching captured Notamon", error);
+        console.error ("Error fetching captured Nexomon", error);
       }
     };
 
-    fetchNotamon();
+    fetchNexomon();
     fetchCaptured();
   }, [token]);
 
@@ -51,38 +51,38 @@ export const DatabasePage = ({ onProgressUpdate }) => {
       });
       if (response.data && onProgressUpdate) {
         onProgressUpdate(response.data.progressPercentage);
-        console.log(`Total Notamon: ${response.data.totalNotamon}\nNotamon Captured: ${response.data.capturedNotamonCount}\nProgress Percentage: ${response.data.progressPercentage}`);
+        console.log(`Total Nexomon: ${response.data.totalNexomon}\nNexomon Captured: ${response.data.capturedNexomonCount}\nProgress Percentage: ${response.data.progressPercentage}`);
       }
     } catch (error) {
       console.error("Error fetching progress data", error);
     }
   };
 
-  const toggleCapture = async (notamonId) => {
-    if (!token) return alert("You must be logged in to track Notamon!");
+  const toggleCapture = async (nexomonId) => {
+    if (!token) return alert("You must be logged in to track Nexomon!");
 
-    const isCaptured = capturedNotamon.has(notamonId);
-    const url = `https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/progress/${notamonId}`;
+    const isCaptured = capturedNexomon.has(nexomonId);
+    const url = `https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/progress/${nexomonId}`;
 
     try {
       if(isCaptured) {
         await axios.delete(url, { headers: { Authorization: `Bearer ${token}` } });
-        capturedNotamon.delete(notamonId);
+        capturedNexomon.delete(nexomonId);
       } else {
         await axios.post(url, {}, { headers: { Authorization: `Bearer ${token}` } });
-        capturedNotamon.add(notamonId);
+        capturedNexomon.add(nexomonId);
       }
 
-      setCapturedNotamon(new Set(capturedNotamon));
+      setCapturedNexomon(new Set(capturedNexomon));
       await fetchProgress();
     } catch (error) {
       console.error("Error updating capture status", error);
     }
   };
 
-  const filteredNotamon = notamonData.filter((notamon) => 
-    notamon.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-  (selectedType === "All" || notamon.type.toLowerCase() === selectedType.toLowerCase())
+  const filteredNexomon = nexomonData.filter((nexomon) => 
+    nexomon.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+  (selectedType === "All" || nexomon.type.toLowerCase() === selectedType.toLowerCase())
   );
 
   return (
@@ -90,14 +90,14 @@ export const DatabasePage = ({ onProgressUpdate }) => {
         <div className="databaseBackground" />
         <Container>
           <h1 className="display-3 databaseHeader text-center">
-            Notamon Database
+            Nexomon Database
           </h1>
 
           <div className="searchDiv mx-auto">
           <Form className="mb-3">
             <Form.Control
               type="text"
-              placeholder="Search Notamon..."
+              placeholder="Search Nexomon..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -105,7 +105,7 @@ export const DatabasePage = ({ onProgressUpdate }) => {
 
           <Form className="mb-3">
             <Form.Select value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
-              {notamonTypes.map((type) => (
+              {nexomonTypes.map((type) => (
                 <option key={type} value={type}>{type}</option>
               ))}
             </Form.Select>
@@ -117,42 +117,42 @@ export const DatabasePage = ({ onProgressUpdate }) => {
                 <tr>
                   {token && <th>Captured</th>}
                   <th id="number-col">#</th>
-                  <th>Notamon</th>
+                  <th>Nexomon</th>
                   <th>Sprite</th>
                   <th>Type</th>
                 </tr>
               </thead>
               <tbody>
                 {
-                  filteredNotamon.map( (notamon) => {
-                    let notamonNumber = notamon.number;
-                    let notamonNumberPadded = notamonNumber.toString().padStart(3, "0");
-                    let notamonName = notamon.name;
-                    let notamonType = notamon.type;
-                    let notamonTypeImagePath = "db/extinction/images/elements/" + notamonType.toLowerCase() + ".png";
-                    let notamonImagePath = "db/extinction/images/notamon/small/" + notamonNumberPadded + "-" + notamonName.toLowerCase() + ".png";
+                  filteredNexomon.map( (nexomon) => {
+                    let nexomonNumber = nexomon.number;
+                    let nexomonNumberPadded = nexomonNumber.toString().padStart(3, "0");
+                    let nexomonName = nexomon.name;
+                    let nexomonType = nexomon.type;
+                    let nexomonTypeImagePath = "db/extinction/images/elements/" + nexomonType.toLowerCase() + ".png";
+                    let nexomonImagePath = "db/extinction/images/nexomon/small/" + nexomonNumberPadded + "-" + nexomonName.toLowerCase() + ".png";
 
                     return (
-                      <tr key={notamon.nexomonId}>
+                      <tr key={nexomon.nexomonId}>
                         {token && (
                           <td>
                             <img 
-                              src={require("../../assets/images/notatrap.png")}
+                              src={require("../../assets/images/nexotrap.png")}
                               alt="Capture Icon"
-                              className={`capture-icon ${capturedNotamon.has(notamon.notamonId) ? "captured" : "not-captured"}`}
-                              onClick={() => toggleCapture(notamon.notamonId)}
+                              className={`capture-icon ${capturedNexomon.has(nexomon.nexomonId) ? "captured" : "not-captured"}`}
+                              onClick={() => toggleCapture(nexomon.nexomonId)}
                               style={{ cursor: "pointer", width: "40px", height: "40px"}}
                               />
                           </td>
                         )}
-                        <td>{notamonNumberPadded}</td>
-                        <td>{notamonName}</td>
+                        <td>{nexomonNumberPadded}</td>
+                        <td>{nexomonName}</td>
                         <td>
-                          <img className="notamon-sprite-img-db" src={notamonImagePath} alt={notamonName} />
+                          <img className="nexomon-sprite-img-db" src={nexomonImagePath} alt={nexomonName} />
                         </td>
                         <td>
-                          {notamonType} <br />
-                          <img className="element-img" src={notamonTypeImagePath} alt={notamonType} />
+                          {nexomonType} <br />
+                          <img className="element-img" src={nexomonTypeImagePath} alt={nexomonType} />
                         </td>
                       </tr>
                     );

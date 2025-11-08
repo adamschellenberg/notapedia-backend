@@ -52,8 +52,8 @@ export const ItemsPage = () => {
           </tbody>
         </table>
 
-        {/* Notatrap Items table */}
-        <h6 className='display-6' id="notatrap-title">Notatrap Items</h6>
+        {/* Nexotrap Items table */}
+        <h6 className='display-6' id="nexotrap-title">Nexotrap Items</h6>
         <table className="table table-dark table-bordered table-sm">
           <thead>
             <tr>
@@ -65,11 +65,11 @@ export const ItemsPage = () => {
           <tbody>
             {
               itemData
-                .filter(item => item.itemType === 'Notatrap')
+                .filter(item => item.itemType === 'Nexotrap')
                 .map( (item) => {
                   let itemName = item.name;
                   let itemDescription = item.description;
-                  let itemImagePath = "db/extinction/images/items/notatraps/" + itemName.replace(/\s+/g, '-').toLowerCase() + ".png";
+                  let itemImagePath = "db/extinction/images/items/nexotraps/" + itemName.replace(/\s+/g, '-').toLowerCase() + ".png";
 
                   return(
                     <tr>

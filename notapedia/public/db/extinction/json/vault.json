@@ -2,22 +2,22 @@
     {
       "vaultId": 1,
       "location": "West of the Outlanders camp, there should be a cave covered up in weeds. After using the fire power, you'll be able to enter. Inside the cave, go to the top-right corner and you'll find an entrace to the vault room.",
-      "contents": "Holoch Companion, Tribute of Power, 550 Coins, Ghost Notatraps"
+      "contents": "Holoch Companion, Tribute of Power, 550 Coins, Ghost Nexotraps"
     },
     {
       "vaultId": 2,
       "location": "East of the Immortal Citadel lies a cave with a vault room. To get there, go east from the Immortal Citadel and keep going east until you reach the next area, further than the camp area (there should be an exit at the top-right corner). Go up and you should eventually find a cave. Inside the cave, go forward and use the wind power to jump to the next side, then head right until you find the vault room entrance.",
-      "contents": "Malitress Companion, Tribute of Decay, 550 Coins, 2 Max Elixers, 2 Fire Notatraps"
+      "contents": "Malitress Companion, Tribute of Decay, 550 Coins, 2 Max Elixers, 2 Fire Nexotraps"
     },
     {
       "vaultId": 3,
       "location": "Located in cave West-North of Ignitia.",
-      "contents": "Acegon Companion, Tribute of Blaze, 550 Coins, 2 Ultra Revives, 2 Wind Notatraps"
+      "contents": "Acegon Companion, Tribute of Blaze, 550 Coins, 2 Ultra Revives, 2 Wind Nexotraps"
     },
     {
       "vaultId": 4,
-      "location": "After teleporting yourself to Ignitia, go east and through the routes until you're in an area with where wild Notamon can be encountered. Go down and follow the path. You should find a cave and someone outside of it. Enter the cave, go to the right entrance, and eventually, you'll find the vault room.",
-      "contents": "Vodo Companion, Tribute of Mind, 550 Coins, Max Ether, Electric Notatraps"
+      "location": "After teleporting yourself to Ignitia, go east and through the routes until you're in an area with where wild Nexomon can be encountered. Go down and follow the path. You should find a cave and someone outside of it. Enter the cave, go to the right entrance, and eventually, you'll find the vault room.",
+      "contents": "Vodo Companion, Tribute of Mind, 550 Coins, Max Ether, Electric Nexotraps"
     },
     {
       "vaultId": 5,
@@ -37,7 +37,7 @@
     {
       "vaultId": 8,
       "location": "Teleport to the Frozen Tundra Base. Move down and then left to enter the next area. It should be a bridge. Cross it and move to the next area. Go down the stairs and go next to the tamer. There should be a cave above him. Enter it. Inside at the top-left corner of the cave, there should be stairs. Go down it and enter the next area. Follow the direct path until you discover two routes  one leading to the vault room and the other leading to an exit. Go to the vault room.",
-      "contents": "Raksuma Companion, Tribute of Nature, 500 Coins, Golden Notatrap"
+      "contents": "Raksuma Companion, Tribute of Nature, 500 Coins, Golden Nexotrap"
     },
     {
       "vaultId": 9,

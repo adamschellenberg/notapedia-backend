@@ -1,4 +1,4 @@
-.notamonBackground {
+.nexomonBackground {
     background-color: #fefd87;
     height: 100%;
     width: 100%;
@@ -7,17 +7,17 @@
     top: 0;
 }
 
-.notamon-header {
+.nexomon-header {
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-.notamon-sprite-img {
+.nexomon-sprite-img {
     border: 1px solid #555;
     padding: 15px;
     width: 200px;
 }
 
-.notamon-element-img {
+.nexomon-element-img {
     width: 50px;
 }

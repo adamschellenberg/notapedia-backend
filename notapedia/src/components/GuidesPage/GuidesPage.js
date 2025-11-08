@@ -168,20 +168,20 @@ export const GuidesPage = () => {
           </tbody>
         </table>
 
-{/* Cosmic Notamon FAQ */}
-        <h6 className="display-6" id="cosmic-title">Cosmic Notamon</h6>
+{/* Cosmic Nexomon FAQ */}
+        <h6 className="display-6" id="cosmic-title">Cosmic Nexomon</h6>
         <div className='cosmic-info'>
         <ul>
-          <li><span className='font-weight-bold'>What is a cosmic Notamon?</span> Cosmic Notamon are the equivalent to shiny Pokemon. Color variants of the Notamon you know and love.</li>
-                  <li><span className='font-weight-bold'>How will I know if a Notamon is cosmic?</span> Cosmic Notamon name boxes will flash red, like in the gif below.</li>
+          <li><span className='font-weight-bold'>What is a cosmic Nexomon?</span> Cosmic Nexomon are the equivalent to shiny Pokemon. Color variants of the Nexomon you know and love.</li>
+                  <li><span className='font-weight-bold'>How will I know if a Nexomon is cosmic?</span> Cosmic Nexomon name boxes will flash red, like in the gif below.</li>
                   <img src={CosmicIndicator} alt="cosmic indicator"/>
-          <li><span className='font-weight-bold'>What are the odds of finding a cosmic Notamon?</span> The rate of finding a cosmic Notamon starts at 1/4000 (0.025%) at the beginning of the game. However, as you progress through the game, this oods will increase as follows:</li>
+          <li><span className='font-weight-bold'>What are the odds of finding a cosmic Nexomon?</span> The rate of finding a cosmic Nexomon starts at 1/4000 (0.025%) at the beginning of the game. However, as you progress through the game, this oods will increase as follows:</li>
           <ul>
             <li>Odds increase to 1/3500 (0.029%) after saving Ignitia, and increases again to 1/3000 (0.033%) after completing the Drake Isles chapter</li>
-            <li>The rate increases by 1 point for each uniquely seen Notamon. Example: 1/3000 odds are increased to 1/2950, if you have seen 50 different Notamon.</li>
-            <li>The rate increases by 2 points for each uniquely owned Notamon. Example: 1/2950 odds are increased to 1/2900, if you have captured 50 different Notamon.</li>
+            <li>The rate increases by 1 point for each uniquely seen Nexomon. Example: 1/3000 odds are increased to 1/2950, if you have seen 50 different Nexomon.</li>
+            <li>The rate increases by 2 points for each uniquely owned Nexomon. Example: 1/2950 odds are increased to 1/2900, if you have captured 50 different Nexomon.</li>
             <li>The rate increases 50 points for each Cosmic Charm owned. Example: 1/2900 odds are increased to 1/2800, if two Cosmic Charms are owned.</li>
-            <li>The best possible odds of finding a cosmic Notamon are 1/1607 (0.0622%), if you are in the late-game, have captured every Notamon, and have found all five Cosmic Charms.</li>
+            <li>The best possible odds of finding a cosmic Nexomon are 1/1607 (0.0622%), if you are in the late-game, have captured every Nexomon, and have found all five Cosmic Charms.</li>
           </ul>
 			  </ul>
         </div>

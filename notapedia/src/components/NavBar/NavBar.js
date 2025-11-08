@@ -21,7 +21,7 @@ export const NavBar = ({ progress }) => {
     <div>
         <Navbar fixed="top" expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="/">Notapedia</Navbar.Brand>
+                <Navbar.Brand href="/">Nexopedia</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav>

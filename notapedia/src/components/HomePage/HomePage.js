@@ -9,9 +9,9 @@ export const HomePage = () => {
       <div className="homeBackground"/>
       <Container>
         <div className="main">
-          <div><h1>D424 Showcase - Task 4</h1></div>
+          <div><h1>Welcome to Nexopedia!</h1></div>
           <hr />
-          <div>Notapedia is a fan-made wiki for the Notamon: Extinction game.
+          <div>Nexopedia is a fan-made wiki for the Nexomon: Extinction game.
             Because this website is fully developed and maintained by fans in their
             free time, things are always changing and being updated. Check back
             often to see the new updates!

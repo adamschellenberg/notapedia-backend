@@ -9,7 +9,7 @@ import './ProfilePage.css';
 
 export const ProfilePage = () => {
     const [profile, setProfile] = useState(null);
-    const [capturedNotamon, setCapturedNotamon] = useState([]);
+    const [capturedNexomon, setCapturedNexomon] = useState([]);
     const token = localStorage.getItem("token");
     const [newUsername, setNewUsername] = useState("");
     const [message, setMessage] = useState(null);
@@ -36,20 +36,20 @@ export const ProfilePage = () => {
             }
         };
 
-        const fetchCapturedNotamon = async () => {
+        const fetchCapturedNexomon = async () => {
             try {
                 const response = await axios.get("https://notapedia-dybrehfjdpbkgkgf.westcentralus-01.azurewebsites.net/api/profile/capturednotamons", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
-                setCapturedNotamon(response.data);
+                setCapturedNexomon(response.data);
             } catch(error) {
-                console.error("Error fetching captured Notamon", error);
+                console.error("Error fetching captured Nexomon", error);
             }
         };
 
         if (token) {
             fetchProfileData();
-            fetchCapturedNotamon();
+            fetchCapturedNexomon();
         }
     }, [token]);
 
@@ -111,7 +111,7 @@ export const ProfilePage = () => {
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
-            link.setAttribute('download', 'Captured_Notamon_Report.txt');
+            link.setAttribute('download', 'Captured_Nexomon_Report.txt');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -172,11 +172,11 @@ export const ProfilePage = () => {
 
             <div className="text-center mt-3">
                 <Button onClick={downloadReport} variant="primary">
-                    Download Captured Notamon Report
+                    Download Captured Nexomon Report
                 </Button>
             </div>
 
-            <h2 className="mt-4">Captured Notamon</h2>
+            <h2 className="mt-4">Captured Nexomon</h2>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -187,19 +187,19 @@ export const ProfilePage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {capturedNotamon.length > 0 ? (
-                        capturedNotamon.map((notamon, index) => (
+                    {capturedNexomon.length > 0 ? (
+                        capturedNexomon.map((nexomon, index) => (
                             <tr key={index}>
-                                <td>{notamon.number}</td>
-                                <td>{notamon.name}</td>
+                                <td>{nexomon.number}</td>
+                                <td>{nexomon.name}</td>
                                 <td>
                                     <img
-                                        src={`db/extinction/images/notamon/small/${notamon.number.toString().padStart(3,"0")}-${notamon.name.toLowerCase()}.png`}
-                                        alt={notamon.name}
+                                        src={`db/extinction/images/nexomon/small/${nexomon.number.toString().padStart(3,"0")}-${nexomon.name.toLowerCase()}.png`}
+                                        alt={nexomon.name}
                                         style={{ width: "75px"}}
                                     />
                                 </td>
-                                <td>{new Date(notamon.captureDate + "Z").toLocaleString(undefined, {
+                                <td>{new Date(nexomon.captureDate + "Z").toLocaleString(undefined, {
                                     year: "numeric",
                                     month: "2-digit",
                                     day: "2-digit",
@@ -211,7 +211,7 @@ export const ProfilePage = () => {
                         ))
                     ) : (
                         <tr>
-                            <td colSpan="4" className="text-center">No Notamon captured yet.</td>
+                            <td colSpan="4" className="text-center">No Nexomon captured yet.</td>
                         </tr>
                     )}
                 </tbody>

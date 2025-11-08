@@ -6,15 +6,15 @@ export const useGetData = {
         return await serverCalls.items();
     },
 
-    useNotamon: async () => {
-        return await serverCalls.notamon();
+    useNexomon: async () => {
+        return await serverCalls.nexomon();
     },
 
-    useGetSingleNotamon: async (notamon) => {
-        const result = await serverCalls.singleNotamon(notamon);
+    useGetSingleNexomon: async (nexomon) => {
+        const result = await serverCalls.singleNexomon(nexomon);
         result.numberPadded = result.number.toString().padStart(3, "0");
-        result.imgUrl = `../db/extinction/images/notamon/small/${result.numberPadded}-${result.name.toLowerCase()}.png`;
-        result.typeUrl = `../db/extinction/images/elements/${result.notamonType.toLowerCase()}.png`;
+        result.imgUrl = `../db/extinction/images/nexomon/small/${result.numberPadded}-${result.name.toLowerCase()}.png`;
+        result.typeUrl = `../db/extinction/images/elements/${result.nexomonType.toLowerCase()}.png`;
         return result;
     },
 

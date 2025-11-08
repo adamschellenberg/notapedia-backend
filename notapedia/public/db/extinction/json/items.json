@@ -86,141 +86,141 @@
     {
       "itemId": 13,
       "name": "Revive",
-      "description": "Restores a fainted Notamon along with 50 HP.",
+      "description": "Restores a fainted Nexomon along with 50 HP.",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 14,
       "name": "Super Revive",
-      "description": "Restores a fainted Notamon along with 80 HP.",
+      "description": "Restores a fainted Nexomon along with 80 HP.",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 15,
       "name": "Ultra Revive",
-      "description": "Restores a fainted Notamon along with 120 HP.",
+      "description": "Restores a fainted Nexomon along with 120 HP.",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 16,
       "name": "Anti Burn",
-      "description": "Cures the BURNING status effect on a Notamon!",
+      "description": "Cures the BURNING status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 17,
       "name": "Anti Paralyze",
-      "description": "Cures the PARALYZED status effect on a Notamon!",
+      "description": "Cures the PARALYZED status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 18,
       "name": "Anti Poison",
-      "description": "Cures the POISONED status effect on a Notamon!",
+      "description": "Cures the POISONED status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 19,
       "name": "Anti Freeze",
-      "description": "Cures the FROZEN status effect on a Notamon!",
+      "description": "Cures the FROZEN status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 20,
       "name": "Anti Sleep",
-      "description": "Cures the ASLEEP status effect on a Notamon!",
+      "description": "Cures the ASLEEP status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 21,
       "name": "Anti Confusion",
-      "description": "Cures the CONFUSED status effect on a Notamon!",
+      "description": "Cures the CONFUSED status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 22,
       "name": "Anti Bind",
-      "description": "Cures the BOUND status effect on a Notamon!",
+      "description": "Cures the BOUND status effect on a Nexomon!",
       "itemType": "Restoration",
       "itemTypeId": 1
     },
     {
       "itemId": 23,
-      "name": "Notatrap",
-      "description": "A basic tool used to capture wild Notamon.",
-      "itemType": "Notatrap",
+      "name": "Nexotrap",
+      "description": "A basic tool used to capture wild Nexomon.",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 24,
-      "name": "Golden Notatrap",
-      "description": "A perfect Notatrap that can capture any Notamon no matter what!",
-      "itemType": "Notatrap",
+      "name": "Golden Nexotrap",
+      "description": "A perfect Nexotrap that can capture any Nexomon no matter what!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 25,
-      "name": "Fire Notatrap",
-      "description": "A Notatrap designed to capture Fire-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Fire Nexotrap",
+      "description": "A Nexotrap designed to capture Fire-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 26,
-      "name": "Water Notatrap",
-      "description": "A Notatrap designed to capture Water-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Water Nexotrap",
+      "description": "A Nexotrap designed to capture Water-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 27,
-      "name": "Wind Notatrap",
-      "description": "A Notatrap designed to capture Wind-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Wind Nexotrap",
+      "description": "A Nexotrap designed to capture Wind-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 28,
-      "name": "Plant Notatrap",
-      "description": "A Notatrap designed to capture Plant-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Plant Nexotrap",
+      "description": "A Nexotrap designed to capture Plant-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 29,
-      "name": "Electric Notatrap",
-      "description": "A Notatrap designed to capture Electric-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Electric Nexotrap",
+      "description": "A Nexotrap designed to capture Electric-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 30,
-      "name": "Mineral Notatrap",
-      "description": "A Notatrap designed to capture Mineral-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Mineral Nexotrap",
+      "description": "A Nexotrap designed to capture Mineral-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 31,
-      "name": "Ghost Notatrap",
-      "description": "A Notatrap designed to capture Ghost-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Ghost Nexotrap",
+      "description": "A Nexotrap designed to capture Ghost-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
       "itemId": 32,
-      "name": "Psychic Notatrap",
-      "description": "A Notatrap designed to capture Psychic-type Notamon!",
-      "itemType": "Notatrap",
+      "name": "Psychic Nexotrap",
+      "description": "A Nexotrap designed to capture Psychic-type Nexomon!",
+      "itemType": "Nexotrap",
       "itemTypeId": 2
     },
     {
@@ -450,7 +450,7 @@
     {
       "itemId": 65,
       "name": "Perfect Berry",
-      "description": "The ultimate meal! There is no Notamon that can resist this!",
+      "description": "The ultimate meal! There is no Nexomon that can resist this!",
       "itemType": "Food",
       "itemTypeId": 5
     },
@@ -576,7 +576,7 @@
     {
       "itemId": 83,
       "name": "Pink Pecana",
-      "description": "A colorful dish. Very popular among young girls and some Notamon too!",
+      "description": "A colorful dish. Very popular among young girls and some Nexomon too!",
       "itemType": "Food",
       "itemTypeId": 5
     },
@@ -695,7 +695,7 @@
     {
       "itemId": 100,
       "name": "Cosmic Charm",
-      "description": "It's said that this improves the chance of finding very peculiar Notamon...",
+      "description": "It's said that this improves the chance of finding very peculiar Nexomon...",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
@@ -722,7 +722,7 @@
     },
     {
       "itemId": 104,
-      "name": "Black Notamite",
+      "name": "Black Nexomite",
       "description": "A fake legendary gemstone of immeasurable value!",
       "itemType": "Key Item",
       "itemTypeId": 6
@@ -835,7 +835,7 @@
     {
       "itemId": 120,
       "name": "Experimental Lure",
-      "description": "A strange lure that attracts extinct Notamon to you while exploring the wild.",
+      "description": "A strange lure that attracts extinct Nexomon to you while exploring the wild.",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
@@ -905,70 +905,70 @@
     {
       "itemId": 130,
       "name": "Normal Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Normal-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Normal-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 131,
       "name": "Fire Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Fire-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Fire-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 132,
       "name": "Water Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Water-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Water-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 133,
       "name": "Plant Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Plant-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Plant-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 134,
       "name": "Wind Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Wind-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Wind-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 135,
       "name": "Electric Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Electric-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Electric-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 136,
       "name": "Mineral Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Mineral-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Mineral-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 137,
       "name": "Psychic Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Psychic-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Psychic-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 138,
       "name": "Ghost Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture Ghost-Type Notamon. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture Ghost-Type Nexomon. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
     {
       "itemId": 139,
       "name": "Dragon Whistle",
-      "description": "With this item, NotaTraps are 3% more likely to capture dragons. This can be stacked!",
+      "description": "With this item, NexoTraps are 3% more likely to capture dragons. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
@@ -982,7 +982,7 @@
     {
       "itemId": 141,
       "name": "Secret Sauce",
-      "description": "Any meal you feed a wild Notamon will be 3% more effective. This can be stacked!",
+      "description": "Any meal you feed a wild Nexomon will be 3% more effective. This can be stacked!",
       "itemType": "Key Item",
       "itemTypeId": 6
     },
@@ -1038,7 +1038,7 @@
     {
       "itemId": 149,
       "name": "Lisa's Lunch",
-      "description": "Food that Lisa, the Notatrap crafter, made us pay for.",
+      "description": "Food that Lisa, the Nexotrap crafter, made us pay for.",
       "itemType": "Key Item",
       "itemTypeId": 6
     },

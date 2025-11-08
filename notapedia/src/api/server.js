@@ -7,13 +7,13 @@ export const serverCalls = {
         return await response.json();
     },
 
-    notamon: async () => {
+    nexomon: async () => {
         const response = await fetch(`${baseUrl}/notamon`);
         return await response.json();
     },
 
-    singleNotamon: async (notamon) => {
-        const response = await fetch(`${baseUrl}/notamon/${notamon}`);
+    singleNexomon: async (nexomon) => {
+        const response = await fetch(`${baseUrl}/notamon/${nexomon}`);
         return await response.json();
     },
 
