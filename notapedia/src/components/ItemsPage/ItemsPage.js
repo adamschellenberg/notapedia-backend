@@ -65,11 +65,11 @@ export const ItemsPage = () => {
           <tbody>
             {
               itemData
-                .filter(item => item.itemType === 'Nexotrap')
+                .filter(item => item.itemType === 'Notatrap')
                 .map( (item) => {
                   let itemName = item.name;
                   let itemDescription = item.description;
-                  let itemImagePath = "db/extinction/images/items/nexotraps/" + itemName.replace(/\s+/g, '-').toLowerCase() + ".png";
+                  let itemImagePath = "db/extinction/images/items/notatraps/" + itemName.replace(/\s+/g, '-').toLowerCase() + ".png";
 
                   return(
                     <tr>
